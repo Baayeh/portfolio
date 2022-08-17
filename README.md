@@ -2,7 +2,7 @@
 
 # My Portfolio
 
-> Learning Linting, HTML and CSS.
+> Developing Portfolio page from scratch.
 
 
 ## Built With
