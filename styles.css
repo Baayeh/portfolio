@@ -58,7 +58,10 @@ section#headline-section {
   background-size: contain;
   background-position: top;
   text-align: center;
-  padding-top: 3.5em;
+  padding-top: 50px;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 section.primary-text {
@@ -69,13 +72,17 @@ section.primary-text {
 
 h2.pt_2 {
   color: #36b37e;
-  align-self: flex-start;
+}
+
+section.secondary-content {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
 }
 
 p.supporting-text {
   font-size: 22px;
   padding: 20px;
-  margin-top: 20px;
   color: #172b4d;
 }
 
@@ -83,9 +90,8 @@ section.socials {
   display: flex;
   justify-content: center;
   gap: 20px;
-  margin-top: 30px;
 }
 
 button.action-btn {
-  margin-top: 50px;
+  /* margin-top: 50px; */
 }
