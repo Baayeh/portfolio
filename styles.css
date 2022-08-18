@@ -171,7 +171,7 @@ section.project-list {
   grid-template-areas: "pj-1" "pj-2" "pj-3" "pj-4" "pj-5" "pj-6";
 }
 
-section.pj-card {
+div.pj-card {
   background-color: #ebf0ee;
   border: 1px solid #d0d9d4;
   border-radius: 8px;
@@ -179,11 +179,11 @@ section.pj-card {
   flex-direction: column;
 }
 
-section.pj-thumbnail {
+div.pj-thumbnail {
   height: 250px;
 }
 
-section.pj-card-body {
+div.pj-card-body {
   background: #fff;
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
