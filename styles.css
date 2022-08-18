@@ -58,7 +58,12 @@ a#logo {
   font-weight: 600;
   font-size: 20px;
   line-height: 28px;
-  text-transform: uppercase;
+  color: #28352f;
+}
+
+button#toggle-btn {
+  padding: 8px;
+  background-color: transparent;
 }
 
 /*
@@ -84,6 +89,8 @@ section.primary-text {
 h2.pt_1,
 h2.pt_2 {
   font-size: 2.62em;
+  line-height: 52px;
+  font-weight: 700;
 }
 
 h2.pt_2 {
@@ -98,7 +105,9 @@ section.secondary-content {
 
 p.supporting-text {
   font-size: 22px;
+  font-weight: 400;
   padding: 20px;
+  line-height: 28px;
   color: #172b4d;
 }
 
@@ -147,6 +156,7 @@ h3.pj-heading {
   margin-top: 20px;
   position: relative;
   padding-bottom: 30px;
+  color: #172b4d;
 }
 
 h3.pj-heading::after {
@@ -198,6 +208,8 @@ div.pj-card-body {
 h2.pj-card-title {
   text-align: center;
   font-size: 24px;
+  color: #3a4a42;
+  line-height: 32px;
 }
 
 ul.pj-card-lists {
@@ -212,10 +224,16 @@ li.pj-card-list-item {
   background-color: #ebf0ee;
   padding: 8px 12px;
   border-radius: 4px;
+  display: flex;
+  align-items: center;
 }
 
 li.pj-card-list-item span {
   font-weight: 600;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.03em;
+  color: #3a4a42;
 }
 
 section.pj-1 {
@@ -242,54 +260,57 @@ section.pj-6 {
   grid-area: pj-6;
 }
 
+button.pj-card-action {
+  padding: 12px;
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 24px;
+}
+
 /*
 About Me Section
 */
 section#about-me {
-  padding: 20px;
   margin-top: 10px;
   display: flex;
   flex-direction: column;
 }
 
 section.about-text {
+  background-image: url('assets/aboutFrame.svg'), url('assets/Mask_Group.svg');
+  background-repeat: no-repeat, no-repeat;
+  background-position: left bottom, right top;
   text-align: center;
-  position: relative;
   height: 350px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-}
-
-img#about-icon {
-  position: absolute;
-  top: -60px;
-  right: -20px;
-}
-
-img#about-bg {
-  position: absolute;
-  left: -20px;
-  bottom: 10px;
+  padding: 20px;
 }
 
 h3.about-heading {
-  font-size: 45px;
+  font-size: 40px;
+  color: #172b4d;
 }
 
 p.about-desc {
   font-size: 20px;
   line-height: 32px;
+  color: #42526e;
 }
 
 button.about-btn {
   width: 50%;
   align-self: center;
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 24px;
+  letter-spacing: 0.03em;
 }
 
 ul.categories {
   list-style-type: none;
-  padding-left: 0;
+  padding: 20px;
   display: flex;
   flex-direction: column;
   height: 70em;
@@ -324,8 +345,7 @@ section.list-body h3.list-title {
   font-size: 24px;
   font-weight: 600;
   color: #344563;
-  text-transform: uppercase;
-  letter-spacing: 1px;
+  line-height: 32px;
   margin-bottom: 20px;
 }
 
@@ -333,17 +353,19 @@ ul.languages {
   padding-left: 0;
   list-style-type: none;
   display: flex;
-  justify-content: space-around;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 li.language {
   background-color: #fff;
   padding: 12px;
   border-radius: 8px;
+  margin: 5px;
 }
 
 li.language span {
-  font-size: 16px;
+  font-size: 12px;
   font-weight: 600;
   letter-spacing: 0.03em;
   color: #36b37e;
