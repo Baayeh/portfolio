@@ -61,13 +61,16 @@ section#headline-section {
   padding-top: 50px;
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
 }
 
 section.primary-text {
-  font-size: 30px;
   margin: 0;
   color: #172b4d;
+}
+
+h2.pt_1,
+h2.pt_2 {
+  font-size: 2.62em;
 }
 
 h2.pt_2 {
@@ -93,5 +96,144 @@ section.socials {
 }
 
 button.action-btn {
-  /* margin-top: 50px; */
+  display: inline;
+  padding-left: 0;
+  width: 50px;
+}
+
+/*
+Projects Section
+*/
+section#projects {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: auto;
+  grid-template-areas: 
+    "pj-heading"
+    "project-list"
+}
+
+h3.pj-heading {
+  grid-area: pj-heading;
+  text-align: center;
+  font-size: 45px;
+  margin-top: 20px;
+  position: relative;
+  padding-bottom: 30px;
+}
+
+h3.pj-heading::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 145px;
+  width: 70px;
+  height: 6px;
+  background-color: #36b37e;
+  border-radius: 10px;
+}
+
+section.project-list {
+  margin-top: 4em;
+  padding: 20px;
+  grid-area: project-list;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: auto;
+  row-gap: 25px;
+  grid-template-areas: 
+    "pj-1"
+    "pj-2"
+    "pj-3"
+    "pj-4"
+    "pj-5"
+    "pj-6";
+}
+
+section.pj-card {
+  background-color: #ebf0ee;
+  border: 1px solid #d0d9d4;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+}
+
+section.pj-thumbnail {
+  height: 250px;
+}
+
+section.pj-card-body {
+  background: #fff;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+  border-bottom-left-radius: 8px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h2.pj-card-title {
+  text-align: center;
+  font-size: 24px;
+}
+
+ul.pj-card-lists {
+  padding-left: 0;
+  list-style-type: none;
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+
+li.pj-card-list-item {
+  background-color: #ebf0ee;
+  padding: 8px 12px;
+  border-radius: 4px;
+}
+
+li.pj-card-list-item span {
+  font-weight: 600;
+}
+
+button.pj-card-action {
+  background-color: #36b37f;
+  color: #fff;
+  padding: 12px;
+  border-radius: 4px;
+  margin: 10px 0;
+  transition: 0.5s;
+}
+
+button.pj-card-action:hover {
+  box-shadow: 0px 8px 16px rgba(54, 179, 127, 0.24);
+}
+
+button.pj-card-action:active {
+  background: #008552;
+}
+
+section.pj-1 {
+  grid-area: pj-1;
+}
+
+section.pj-2 {
+  grid-area: pj-2;
+}
+
+section.pj-3 {
+  grid-area: pj-3;
+}
+
+section.pj-4 {
+  grid-area: pj-4;
+}
+
+section.pj-5 {
+  grid-area: pj-5;
+}
+
+section.pj-6 {
+  grid-area: pj-6;
 }
