@@ -2,7 +2,12 @@
 
 # My Portfolio
 
-> Developing Portfolio page from scratch.
+> Developing my portfolio page from scratch.
+> This project gives detailed information about:
+- Who Kwasi Baayeh is?
+- My skills
+- Projects I have worked on
+- My Resume
 
 
 ## Built With
