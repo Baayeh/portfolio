@@ -370,3 +370,73 @@ li.language span {
   letter-spacing: 0.03em;
   color: #36b37e;
 }
+
+/*
+Contact Section
+*/
+#contact {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+ul.form-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+#contact h2 {
+  font-size: 40px;
+  font-weight: 700;
+  width: 327px;
+  height: 363px;
+  color: #172b4d;
+  margin-bottom: 50px;
+}
+
+#form {
+  display: flex;
+  justify-content: center;
+  background-image: url('./assets/illustration-contact-form.svg');
+  background-repeat: no-repeat;
+  background-position: right bottom;
+}
+
+.form-control {
+  width: 300px;
+  height: 48px;
+  border-radius: 4px;
+  background-color: #fff;
+  color: #6b778c;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 24px;
+  border: 1px solid #d0d9d4;
+  padding-left: 10px;
+}
+
+#form-textarea {
+  height: 114px;
+  border: 1px solid #60c095;
+  color: #091e42;
+}
+
+ul.form-list li:nth-child(2) {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.btn-submit {
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+p.email-address {
+  margin-top: 10px;
+  height: 189px;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 32px;
+  color: #42526e;
+}
