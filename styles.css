@@ -2,8 +2,10 @@
 General Styles
 */
 
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700&display=swap');
+
 body {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: 'Inter', sans-serif;
   color: #28352f;
   margin: 0;
 }
@@ -42,6 +44,12 @@ button:active {
   background: #008552;
 }
 
+div.hero-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 /*
 Navigation
 */
@@ -51,7 +59,7 @@ nav.navigation {
   justify-content: space-between;
   height: 48px;
   align-items: center;
-  padding: 10px 20px;
+  width: 90%;
 }
 
 a#logo {
@@ -59,6 +67,10 @@ a#logo {
   font-size: 20px;
   line-height: 28px;
   color: #28352f;
+}
+
+ul.nav-list {
+  display: none;
 }
 
 button#toggle-btn {
@@ -69,16 +81,16 @@ button#toggle-btn {
 /*
 Headline Section
 */
-
 section#headline-section {
   background-image: url('assets/header-illsutration-mobile.svg');
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
   background-position: top;
-  text-align: center;
-  padding-top: 50px;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding-top: 3.5em;
 }
 
 section.primary-text {
@@ -89,7 +101,6 @@ section.primary-text {
 h2.pt_1,
 h2.pt_2 {
   font-size: 2.62em;
-  line-height: 52px;
   font-weight: 700;
 }
 
@@ -111,16 +122,16 @@ p.supporting-text {
   color: #172b4d;
 }
 
-section.socials {
+footer.socials {
   display: flex;
+  align-items: baseline;
   justify-content: center;
   gap: 20px;
 }
 
-section.action-btn {
-  display: inline;
-  padding-left: 0;
-  width: 50px;
+section#action-btn {
+  flex-basis: 10em;
+  margin-top: 5em;
 }
 
 button.ac-btn {
@@ -128,6 +139,7 @@ button.ac-btn {
   height: 50px;
   border-radius: 50px;
   background-color: transparent;
+  border: 1px solid #dfe1e6;
 }
 
 button.ac-btn:hover {
@@ -281,7 +293,6 @@ section.about-text {
   background-repeat: no-repeat, no-repeat;
   background-position: left bottom, right top;
   text-align: center;
-  height: 350px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -300,7 +311,7 @@ p.about-desc {
 }
 
 button.about-btn {
-  width: 50%;
+  width: 10em;
   align-self: center;
   font-weight: 500;
   font-size: 17px;
@@ -313,7 +324,7 @@ ul.categories {
   padding: 20px;
   display: flex;
   flex-direction: column;
-  height: 70em;
+  height: 72em;
   justify-content: space-around;
 }
 
@@ -331,14 +342,6 @@ li.list-item {
 
 li.list-item img {
   width: 50%;
-}
-
-section.list-body {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  height: 130px;
-  justify-content: center;
 }
 
 section.list-body h3.list-title {
@@ -377,7 +380,12 @@ Contact Section
 #contact {
   display: flex;
   flex-direction: column;
+  align-items: center;
   text-align: center;
+}
+
+section#contact div {
+  width: 100%;
 }
 
 ul.form-list {
@@ -392,10 +400,11 @@ ul.form-list {
   width: 327px;
   height: 363px;
   color: #172b4d;
-  margin-bottom: 50px;
+  margin: 0 auto 50px;
 }
 
 #form {
+  width: 100%;
   display: flex;
   justify-content: center;
   background-image: url('./assets/illustration-contact-form.svg');
@@ -439,4 +448,459 @@ p.email-address {
   font-weight: 400;
   line-height: 32px;
   color: #42526e;
+}
+
+/*
+Media Queries for Medium and Large screens
+*/
+
+@media (min-width: 400px) and (max-width: 737px) {
+  a#logo,
+  button#toggle-btn {
+    display: none;
+  }
+
+  nav.navigation {
+    padding-top: 2em;
+  }
+
+  ul.nav-list {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+    width: 100%;
+  }
+
+  li.nav-item {
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 20px;
+    color: #344563;
+  }
+
+  li.nav-item:nth-child(2) {
+    margin: 0 32px;
+  }
+
+  section#headline-section {
+    background: none;
+    margin-top: 2em;
+  }
+
+  div.hero-section {
+    background-image: url('assets/Header-llustration-desktop.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+    height: 40em;
+  }
+
+  h2.pt_1,
+  h2.pt_2 {
+    font-size: 35px;
+  }
+
+  h3.pj-heading {
+    margin-bottom: 0;
+    padding: 0 1em 0.5em 1em;
+  }
+
+  h3.pj-heading::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 70px;
+    height: 6px;
+    background-color: #36b37e;
+    border-radius: 10px;
+  }
+
+  section#projects {
+    margin-top: 3em;
+  }
+
+  p.about-desc {
+    font-size: 18px;
+    padding: 0 1em;
+  }
+
+  section.about-text {
+    display: block;
+    height: 13em;
+  }
+
+  ul.categories {
+    height: 85em;
+    width: 70%;
+    margin: 0 auto;
+  }
+
+  #contact h2 {
+    width: 420px;
+    height: 180px;
+    font-size: 30px;
+  }
+
+  ul.form-list {
+    width: 80%;
+  }
+
+  .form-control {
+    width: 80%;
+  }
+
+  p.email-address {
+    height: 70px;
+  }
+
+  footer.socials {
+    padding: 1em;
+    align-items: baseline;
+  }
+}
+
+@media screen and (min-width: 738px) {
+  /*
+  Headline Section
+  */
+  div.hero-section {
+    background-image: url('assets/Header-llustration-desktop.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+    height: 40em;
+  }
+
+  /*
+  Navigation
+  */
+  nav.navigation {
+    padding-top: 2em;
+  }
+
+  a#logo,
+  button#toggle-btn {
+    display: none;
+  }
+
+  ul.nav-list {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+    width: 100%;
+  }
+
+  li.nav-item {
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 20px;
+    color: #344563;
+  }
+
+  li.nav-item:nth-child(2) {
+    margin: 0 32px;
+  }
+
+  section#headline-section {
+    background: none;
+    margin-top: 2em;
+  }
+
+  h2.pt_1,
+  h2.pt_2 {
+    font-size: 43px;
+  }
+
+  section.secondary-content {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  p.supporting-text {
+    width: 33em;
+    margin: 0 auto;
+    font-size: 16px;
+    font-weight: 400;
+    color: #172b4d;
+  }
+
+  footer.socials {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 1em;
+    align-items: baseline;
+  }
+
+  /*
+  Projects Section
+  */
+  h3.pj-heading {
+    margin-bottom: 0;
+  }
+
+  h3.pj-heading::after {
+    display: none;
+  }
+
+  section.project-list {
+    margin-top: 0;
+    display: grid;
+    min-height: 55em;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+    padding-bottom: 0;
+  }
+
+  /*
+  About Section
+  */
+  section#about-me {
+    min-height: 114em;
+  }
+
+  section.about-text {
+    background-image: url('assets/illustration-about-me-2-desktop@2x.svg'), url('assets/illustration-about\ me-1-desktop@2x.svg');
+    background-repeat: no-repeat, no-repeat;
+    background-size: 10em, 8em;
+    background-position: left center, right top;
+    display: block;
+    padding-bottom: 0;
+    height: 35em;
+  }
+
+  p.about-desc {
+    width: 65%;
+    margin: 0.6em auto;
+  }
+
+  ul.categories {
+    margin-top: 2em;
+    flex-direction: column;
+    height: 55em;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  li.list-item {
+    width: 45%;
+    padding: 3em;
+    min-height: 22em;
+    border-radius: 8px;
+    border: 1px solid #c1c7d0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  li.list-item:nth-child(2) {
+    margin: 1.5em 0;
+  }
+
+  section#contact {
+    background-image: url('assets/Frame-1.svg'), url('assets/illustration-2-contact-form-desktop.svg'), url('assets/Frame.svg');
+    background-repeat: no-repeat;
+    background-position: left bottom, 10em bottom, right bottom;
+    background-size: 9em;
+    border-bottom: 1px solid #dfe1e6;
+  }
+
+  section#contact div {
+    width: 70%;
+    margin: 0 auto;
+    align-items: center;
+    gap: 2em;
+  }
+
+  section#contact div h2 {
+    font-size: 30px;
+    text-align: center;
+    width: 17em;
+    margin: 0 auto;
+    height: 5em;
+  }
+
+  #form {
+    width: 100%;
+    background: none;
+  }
+
+  ul.form-list {
+    width: 100%;
+    padding-left: 0;
+  }
+
+  ul.form-list li .form-control {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  ul.form-list li {
+    text-align: center;
+  }
+
+  p.email-address {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 930px) {
+  /*
+  Projects Section
+  */
+  section.project-list {
+    margin-top: 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 25px;
+    grid-template-areas:
+      "pj-1" "pj-2" "pj-3"
+      "pj-4" "pj-5" "pj-6";
+  }
+}
+
+@media screen and (min-width: 992px) {
+  /*
+  Headline Section
+  */
+  section#headline-section {
+    margin-top: 4em;
+  }
+
+  h2.pt_1,
+  h2.pt_2 {
+    font-size: 48px;
+  }
+
+  p.supporting-text {
+    font-size: 18px;
+  }
+
+  section#about-me {
+    min-height: 90em;
+    align-content: flex-start;
+    justify-content: flex-start;
+  }
+
+  section.about-text {
+    background-position: left center, right top;
+    background-size: 14em, 13em;
+    padding: 3em 0 0 0;
+    height: 20em;
+  }
+
+  p.about-desc {
+    width: 60%;
+  }
+
+  ul.categories {
+    margin-top: 0;
+    padding-top: 0;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: 60em;
+    align-content: flex-start;
+  }
+
+  li.list-item {
+    width: 33.3%;
+    margin: 0;
+  }
+
+  li.list-item:nth-child(3) {
+    margin-top: 0.7em;
+  }
+
+  section#contact div h2 {
+    width: 20em;
+    font-size: 35px;
+    height: 4.5em;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  div.hero-section {
+    min-height: 60em;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  /*
+  Headline Section
+  */
+  section#headline-section {
+    margin-top: 8em;
+  }
+
+  p.supporting-text {
+    font-size: 20px;
+    width: 38em;
+  }
+
+  section.project-list {
+    width: 70%;
+    margin: 0 auto;
+  }
+
+  section#about-me {
+    min-height: 55em;
+  }
+
+  section.about-text {
+    background-size: 15em, 15em;
+    height: 14em;
+  }
+
+  p.about-desc {
+    width: 70%;
+  }
+
+  ul.categories {
+    flex-wrap: nowrap;
+    width: 85%;
+    margin: 3rem auto;
+    align-items: flex-start;
+    gap: 2em;
+    height: 30em !important;
+  }
+
+  li.list-item:nth-child(2),
+  li.list-item:nth-child(3) {
+    margin-top: 0;
+  }
+
+  section#contact div {
+    display: flex;
+    padding-bottom: 10em;
+  }
+
+  section#contact div h2 {
+    height: 7em;
+  }
+
+  ul.form-list li {
+    text-align: start;
+  }
+
+  footer.socials {
+    padding: 1.5em;
+  }
+}
+
+@media screen and (min-width: 1332px) {
+  /*
+  Headline Section
+  */
+  p.supporting-text {
+    width: 45em;
+  }
 }

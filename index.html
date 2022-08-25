@@ -9,46 +9,61 @@
 </head>
 <body>
     <section class="main-wrapper">
-        <nav class="navigation">
-            <a href="/index.html" id="logo">Welcome</a>
-            <button type="button" id="toggle-btn">
-                <img src="/assets/icon-menu.png" alt="Toggle icon">
-            </button>
-        </nav>
-        <section id="headline-section">
-            <section class="primary-text">
-                <h2 class="pt_1">Hey there. I’m Kwasi</h2>
-                <h2 class="primary-text pt_2">I’m a software developer</h2>
-            </section>
-
-            <section class="secondary-content">
-                <p class="supporting-text"> I can help you build a product , feature or website Look through some of my work and experience! If you like what you see and have a project you need coded, don’t hesitate to contact me.</p>
-
-                <section class="socials">
-                    <a href="#" class="twitter-icon">
-                        <img src="assets/twitter.svg" alt="Twitter icon">
-                    </a>
-                    <a href="#" class="linked-icon">
-                        <img src="assets/linkedin.svg" alt="LinkedIn Icon">
-                    </a>
-                    <a href="#" class="medium-icon">
-                        <img src="assets/medium.svg" alt="Medium icon">
-                    </a>
-                    <a href="#" class="github-icon">
-                        <img src="assets/github.svg" alt="Github icon">
-                    </a>
-                    <a href="#" class="angellist-icon">
-                        <img src="assets/angellist.svg" alt="Angel List icon">
-                    </a>
+        <div class="hero-section">
+            <nav class="navigation">
+                <a href="/index.html" id="logo">Welcome</a>
+    
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Portfolio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Contact</a>
+                    </li>
+                </ul>
+    
+                <button type="button" id="toggle-btn">
+                    <img src="./assets/icon-menu.png" alt="Toggle icon">
+                </button>
+            </nav>
+            <section id="headline-section">
+                <section class="primary-text">
+                    <h2 class="pt_1">Hey there. I’m Kwasi</h2>
+                    <h2 class="primary-text pt_2">I’m a software developer</h2>
                 </section>
-                
-                <section id="action-btn">
-                    <button type="button" class="ac-btn">
-                        <img src="assets/Action.png" alt="An action icon">
-                    </button>
+    
+                <section class="secondary-content">
+                    <p class="supporting-text"> I can help you build a product , feature or website Look through some of my work and experience! If you like what you see and have a project you need coded, don’t hesitate to contact me.</p>
+    
+                    <section class="socials">
+                        <a href="#" class="twitter-icon">
+                            <img src="assets/twitter.svg" alt="Twitter icon">
+                        </a>
+                        <a href="#" class="linked-icon">
+                            <img src="assets/linkedin.svg" alt="LinkedIn Icon">
+                        </a>
+                        <a href="#" class="medium-icon">
+                            <img src="assets/medium.svg" alt="Medium icon">
+                        </a>
+                        <a href="#" class="github-icon">
+                            <img src="assets/github.svg" alt="Github icon">
+                        </a>
+                        <a href="#" class="angellist-icon">
+                            <img src="assets/angellist.svg" alt="Angel List icon">
+                        </a>
+                    </section>
+                    
                 </section>
             </section>
-        </section>
+            <section id="action-btn">
+                <button type="button" class="ac-btn">
+                    <img src="assets/Action.png" alt="An action icon">
+                </button>
+            </section>
+        </div>
 
         <!--Projects Section-->
         <section id="projects">
@@ -254,42 +269,45 @@
 
         <!--Contact Me-->
         <section id="contact">
-            <h2>I'm always interested in hearing about new projects, so if you'd like to chat please get in touch.</h2>
-            <form id="form" action="https://formspree.io/f/xbjbldaw" method="post">
-                <ul class="form-list">
-                    <li>
-                        <input type="text" name="name" class="form-control" placeholder="Full name" maxlength="30" required>
-                    </li>
-                    <li>
-                        <input type="email" name="email" class="form-control" placeholder="Email address" required>
-                    </li>
-                    <li>
-                        <textarea name="text" id="form-textarea" class="form-control" maxlength="500" placeholder="Enter text here" required></textarea>
-                    </li>
-                    <li>
-                        <button type="submit" class="btn-submit">Get in touch</button>
-                    </li>
-                </ul>
-            </form>
-            <section class="socials">
-                <a href="#" class="twitter-icon">
-                    <img src="assets/twitter.svg" alt="Twitter icon">
-                </a>
-                <a href="#" class="linked-icon">
-                    <img src="assets/linkedin.svg" alt="LinkedIn Icon">
-                </a>
-                <a href="#" class="medium-icon">
-                    <img src="assets/medium.svg" alt="Medium icon">
-                </a>
-                <a href="#" class="github-icon">
-                    <img src="assets/github.svg" alt="Github icon">
-                </a>
-                <a href="#" class="angellist-icon">
-                    <img src="assets/angellist.svg" alt="Angel List icon">
-                </a>
-            </section>
+            <div>
+                <h2>I'm always interested in hearing about new projects, so if you'd like to chat please get in touch.</h2>
+                <form id="form" action="https://formspree.io/f/xbjbldaw" method="post">
+                    <ul class="form-list">
+                        <li>
+                            <input type="text" name="name" class="form-control" placeholder="Full name" maxlength="30" required>
+                        </li>
+                        <li>
+                            <input type="email" name="email" class="form-control" placeholder="Email address" required>
+                        </li>
+                        <li>
+                            <textarea name="text" id="form-textarea" class="form-control" maxlength="500" placeholder="Enter text here" required></textarea>
+                        </li>
+                        <li>
+                            <button type="submit" class="btn-submit">Get in touch</button>
+                        </li>
+                    </ul>
+                </form>
+            </div>
             <p class="email-address">kabaayeh@gmail.com</p>
         </section>
+
+        <footer class="socials">
+            <a href="#" class="twitter-icon">
+                <img src="assets/twitter.svg" alt="Twitter icon">
+            </a>
+            <a href="#" class="linked-icon">
+                <img src="assets/linkedin.svg" alt="LinkedIn Icon">
+            </a>
+            <a href="#" class="medium-icon">
+                <img src="assets/medium.svg" alt="Medium icon">
+            </a>
+            <a href="#" class="github-icon">
+                <img src="assets/github.svg" alt="Github icon">
+            </a>
+            <a href="#" class="angellist-icon">
+                <img src="assets/angellist.svg" alt="Angel List icon">
+            </a>
+        </footer>
     </section>
 </body>
 </html>
