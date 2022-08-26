@@ -604,6 +604,14 @@ Media Queries for Medium and Large screens
     color: #344563;
   }
 
+  li.nav-item a {
+    transition: 0.8s;
+  }
+
+  li.nav-item a:hover {
+    color: #36b37e;
+  }
+
   li.nav-item:nth-child(2) {
     margin: 0 32px;
   }
@@ -611,6 +619,25 @@ Media Queries for Medium and Large screens
   section#headline-section {
     background: none;
     margin-top: 2em;
+  }
+
+  .kwasi {
+    animation-name: rotation;
+    animation-duration: 3s;
+  }
+
+  @keyframes rotation {
+    0% {
+      transform: rotate(0deg);
+    }
+
+    50% {
+      transform: rotate(180deg);
+    }
+
+    100% {
+      transform: rotate(360deg);
+    }
   }
 
   h2.pt_1,
@@ -699,6 +726,20 @@ Media Queries for Medium and Large screens
     display: flex;
     flex-direction: column;
     align-items: center;
+    transition: 1s;
+  }
+
+  li.list-item:hover {
+    cursor: pointer;
+    border: 1px dashed #36b37e;
+  }
+
+  li.list-item img {
+    transition: 1s;
+  }
+
+  li.list-item img:hover {
+    transform: scale(1.2);
   }
 
   li.list-item:nth-child(2) {
@@ -776,6 +817,25 @@ Media Queries for Medium and Large screens
     margin-top: 4em;
   }
 
+  .kwasi {
+    animation-name: rotation;
+    animation-duration: 3s;
+  }
+
+  @keyframes rotation {
+    0% {
+      transform: rotate(0deg);
+    }
+
+    50% {
+      transform: rotate(180deg);
+    }
+
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
   h2.pt_1,
   h2.pt_2 {
     font-size: 48px;
@@ -839,6 +899,25 @@ Media Queries for Medium and Large screens
   */
   section#headline-section {
     margin-top: 8em;
+  }
+
+  .kwasi {
+    animation-name: rotation;
+    animation-duration: 3s;
+  }
+
+  @keyframes rotation {
+    0% {
+      transform: rotate(0deg);
+    }
+
+    50% {
+      transform: rotate(180deg);
+    }
+
+    100% {
+      transform: rotate(360deg);
+    }
   }
 
   p.supporting-text {
