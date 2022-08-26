@@ -604,6 +604,14 @@ Media Queries for Medium and Large screens
     color: #344563;
   }
 
+  li.nav-item a {
+    transition: 0.8s;
+  }
+
+  li.nav-item a:hover {
+    color: #36b37e;
+  }
+
   li.nav-item:nth-child(2) {
     margin: 0 32px;
   }
