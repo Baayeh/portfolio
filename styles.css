@@ -726,6 +726,12 @@ Media Queries for Medium and Large screens
     display: flex;
     flex-direction: column;
     align-items: center;
+    transition: 1s;
+  }
+
+  li.list-item:hover {
+    cursor: pointer;
+    border: 1px dashed #36b37e;
   }
 
   li.list-item:nth-child(2) {
