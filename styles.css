@@ -736,11 +736,11 @@ Media Queries for Medium and Large screens
 
   li.list-item img {
     transition: 1s;
-  } 
+  }
 
   li.list-item img:hover {
     transform: scale(1.2);
-  } 
+  }
 
   li.list-item:nth-child(2) {
     margin: 1.5em 0;
