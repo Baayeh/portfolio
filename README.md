@@ -14,6 +14,11 @@
 
 - HTML, CSS, Javascript
 
+
+## Live Demo
+
+[Live Demo Link](https://baayeh.github.io/portfolio/)
+
 ## Getting Started
 
 To get a local copy up and running follow these simple example steps.
