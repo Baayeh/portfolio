@@ -4,6 +4,10 @@ General Styles
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700&display=swap');
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: 'Inter', sans-serif;
   color: #28352f;
@@ -60,6 +64,7 @@ nav.navigation {
   height: 48px;
   align-items: center;
   width: 100%;
+  position: relative;
 }
 
 a#logo {
@@ -67,50 +72,50 @@ a#logo {
   font-size: 20px;
   line-height: 28px;
   color: #28352f;
+  margin-left: 0.6em;
 }
 
-/* ul.nav-list {
-  display: none;
-} */
-
-button#closeBtn {
-  position: relative;
-  left: 85%;
-  background-color: transparent;
-  color: grey;
-  font-size: 20px;
-}
-
-ul#list-items {
+ul.nav-list {
   position: absolute;
+  display: flex;
+  flex-direction: column;
   top: 0;
-  background-color: #fff;
+  left: -25em;
   width: 100%;
   list-style-type: none;
-  padding-left: 0;
   margin-left: 0;
+  margin-top: 0;
+  padding-left: 0;
+  background-color: #fff;
+  color: #3a4a42;
   height: 100vh;
-  display: none;
+  transition: left 0.7s;
+  border-bottom-left-radius: 3em;
+  border-bottom-right-radius: 3em;
 }
 
-ul.form-list li:nth-child(2) {
-  margin-top: 20px;
-  margin-bottom: 20px;
-}
-
-ul#list-items li {
-  padding-left: 25px;
-  font-size: 30px;
+li.nav-item {
+  font-size: 32px;
   font-weight: 600;
+  padding-left: 0.7em;
+  line-height: 44px;
 }
 
-ul#list-items li:nth-child(3) {
-  margin: 20px 0;
+li.nav-item:nth-child(3) {
+  margin: 0.7em 0;
 }
 
 button#toggle-btn {
   padding: 8px;
   background-color: transparent;
+}
+
+button#close-btn {
+  background-color: transparent;
+  color: gray;
+  font-size: 1.5em;
+  width: 2em;
+  align-self: flex-end;
 }
 
 /*
@@ -466,6 +471,11 @@ ul.form-list {
   color: #091e42;
 }
 
+ul.form-list li:nth-child(2) {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
 .btn-submit {
   margin-top: 20px;
   margin-bottom: 30px;
@@ -486,21 +496,23 @@ Media Queries for Medium and Large screens
 
 @media (min-width: 400px) and (max-width: 737px) {
   a#logo,
-  button#toggle-btn {
+  button#toggle-btn,
+  button#close-btn {
     display: none;
   }
 
-  nav.navigation {
-    padding-top: 2em;
-  }
-
   ul.nav-list {
+    position: static;
     display: flex;
+    flex-direction: row;
+    align-items: center;
     list-style-type: none;
     margin: 0;
-    padding: 0;
+    padding: 1em 0;
     justify-content: center;
     width: 100%;
+    background-color: transparent;
+    height: auto;
   }
 
   li.nav-item {
@@ -508,9 +520,14 @@ Media Queries for Medium and Large screens
     font-weight: 600;
     line-height: 20px;
     color: #344563;
+    padding-left: 0;
   }
 
-  li.nav-item:nth-child(2) {
+  li.nav-item:nth-child(1) {
+    margin-top: auto;
+  }
+
+  li.nav-item:nth-child(3) {
     margin: 0 32px;
   }
 
@@ -609,22 +626,25 @@ Media Queries for Medium and Large screens
   /*
   Navigation
   */
-  nav.navigation {
-    padding-top: 2em;
-  }
 
   a#logo,
-  button#toggle-btn {
+  button#toggle-btn,
+  button#close-btn {
     display: none;
   }
 
   ul.nav-list {
+    position: static;
     display: flex;
+    flex-direction: row;
+    align-items: center;
     list-style-type: none;
     margin: 0;
-    padding: 0;
+    padding: 1em 0;
     justify-content: center;
     width: 100%;
+    height: auto;
+    background-color: transparent;
   }
 
   li.nav-item {
@@ -632,6 +652,11 @@ Media Queries for Medium and Large screens
     font-weight: 600;
     line-height: 20px;
     color: #344563;
+    padding-left: 0;
+  }
+
+  li.nav-item:nth-child(1) {
+    margin-top: auto;
   }
 
   li.nav-item a {
@@ -642,7 +667,7 @@ Media Queries for Medium and Large screens
     color: #36b37e;
   }
 
-  li.nav-item:nth-child(2) {
+  li.nav-item:nth-child(3) {
     margin: 0 32px;
   }
 
