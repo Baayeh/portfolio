@@ -90,6 +90,7 @@ ul#list-items {
   padding-left: 0;
   margin-left: 0;
   height: 100vh;
+  display: none;
 }
 
 ul#list-items li {
