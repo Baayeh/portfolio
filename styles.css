@@ -101,6 +101,10 @@ li.nav-item {
   line-height: 44px;
 }
 
+ul.nav-list li:nth-child(1) {
+  text-align: end;
+}
+
 li.nav-item:nth-child(3) {
   margin: 0.7em 0;
 }
