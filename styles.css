@@ -93,6 +93,11 @@ ul#list-items {
   display: none;
 }
 
+ul.form-list li:nth-child(2) {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
 ul#list-items li {
   padding-left: 25px;
   font-size: 30px;
@@ -459,11 +464,6 @@ ul.form-list {
   height: 114px;
   border: 1px solid #60c095;
   color: #091e42;
-}
-
-ul.form-list li:nth-child(2) {
-  margin-top: 20px;
-  margin-bottom: 20px;
 }
 
 .btn-submit {
