@@ -10,7 +10,6 @@ const mainWrapper = document.querySelector('.main-wrapper');
 const form = document.querySelector('#form');
 const error = document.querySelector('#errorMessage');
 
-
 openBtn.addEventListener('click', () => {
   navList.style.left = '0';
 });
@@ -150,7 +149,6 @@ const addModalContent = (projItem) => {
 
 projectDetails.forEach((element) => {
   element.addEventListener('click', (e) => {
-    console.log(e);
     const singleProj = e.target.parentElement.parentElement.getAttribute('id');
     const project = recentProjects[singleProj];
     addModalContent(project);
@@ -163,7 +161,10 @@ form.addEventListener('submit', (e) => {
   const emailToLowerCase = email.value.toLowerCase();
   if (email.value === emailToLowerCase) {
     form.submit();
+    form.reset();
   } else {
-    error.innerText = 'Please input lower cases for email'
+    email.style.backgroundColor = '#ff000061';
+    email.style.color = '#000';
+    error.innerText = `Please input lower cases for email: ( ${emailToLowerCase} )`;
   }
 });

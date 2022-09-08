@@ -338,6 +338,7 @@ div#proj-overlay {
   bottom: 0;
   z-index: 10;
   display: none;
+  overflow-y: auto;
 }
 
 .proj-name {
@@ -390,6 +391,13 @@ a.info-link {
   letter-spacing: 0.03em;
 }
 
+li.language span {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  color: #36b37e;
+}
+
 a.info-link span:nth-child(2) {
   margin-left: 0.5em;
 }
@@ -408,10 +416,6 @@ li.pj-tech-item {
 
 div#modal div.btnWrapper {
   text-align: end;
-}
-
-div#proj-overlay {
-  overflow-y: auto;
 }
 
 div#proj-overlay::-webkit-scrollbar {
@@ -434,26 +438,23 @@ div#modal {
 
 div.content-info {
   display: grid;
-  grid-template-areas: 
-    'proj-name proj-name proj-name'
-    'pj-tech-lists pj-tech-lists pj-tech-lists'
-    'proj-desc proj-desc proj-desc'
-    'content-info-btn content-info-btn content-info-btn';
+  grid-template-areas: 'proj-name proj-name proj-name' 'pj-tech-lists pj-tech-lists pj-tech-lists' 'proj-desc proj-desc proj-desc' 'content-info-btn content-info-btn content-info-btn';
   column-gap: 2px;
 }
 
 @keyframes slideDown {
-  0%{
+  0% {
     opacity: 0;
     top: 46%;
   }
-  100%{
+
+  100% {
     opacity: 1;
     top: 50%;
   }
 }
 
-.btnWrapper{
+.btnWrapper {
   position: absolute;
   right: 25px;
 }
@@ -546,13 +547,6 @@ li.language {
   margin: 5px;
 }
 
-li.language span {
-  font-size: 12px;
-  font-weight: 600;
-  letter-spacing: 0.03em;
-  color: #36b37e;
-}
-
 /*
 Contact Section
 */
@@ -595,7 +589,6 @@ ul.form-list {
   width: 300px;
   height: 48px;
   border-radius: 4px;
-  background-color: #fff;
   color: #6b778c;
   font-size: 15px;
   font-weight: 400;
@@ -629,7 +622,10 @@ p.email-address {
   color: #42526e;
 }
 
-
+li#errorMessage {
+  color: red;
+  text-align: center;
+}
 
 /*
 Media Queries for Medium and Large screens
@@ -764,10 +760,7 @@ Media Queries for Medium and Large screens
 
   div.content-info {
     display: grid;
-    grid-template-areas: 
-      'proj-name proj-name content-info-btn'
-      'pj-tech-lists pj-tech-lists pj-tech-lists'
-      'proj-desc proj-desc proj-desc';
+    grid-template-areas: 'proj-name proj-name content-info-btn' 'pj-tech-lists pj-tech-lists pj-tech-lists' 'proj-desc proj-desc proj-desc';
     column-gap: 2px;
   }
 }
@@ -903,8 +896,6 @@ Media Queries for Medium and Large screens
     padding-bottom: 0;
   }
 
-
-
   div#modal {
     width: 50%;
     position: absolute;
@@ -919,10 +910,7 @@ Media Queries for Medium and Large screens
 
   div.content-info {
     display: grid;
-    grid-template-areas: 
-      'proj-name proj-name content-info-btn'
-      'pj-tech-lists pj-tech-lists pj-tech-lists'
-      'proj-desc proj-desc proj-desc';
+    grid-template-areas: 'proj-name proj-name content-info-btn' 'pj-tech-lists pj-tech-lists pj-tech-lists' 'proj-desc proj-desc proj-desc';
     column-gap: 2px;
   }
 
@@ -939,10 +927,9 @@ Media Queries for Medium and Large screens
     width: max-content;
   }
 
-  .btnWrapper{
+  .btnWrapper {
     position: static;
   }
-
 
   /*
   About Section
