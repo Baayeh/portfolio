@@ -54,6 +54,10 @@ div.hero-section {
   align-items: center;
 }
 
+section.main-wrapper {
+  transition: filter 0.3s;
+}
+
 /*
 Navigation
 */
@@ -333,6 +337,7 @@ div#proj-overlay {
   right: 0;
   bottom: 0;
   z-index: 10;
+  display: none;
 }
 
 .proj-name {
@@ -381,7 +386,7 @@ a.info-link {
   align-items: center;
   width: 100%;
   justify-content: center;
-  font-size: 17px;
+  font-size: 14px;
   letter-spacing: 0.03em;
 }
 
@@ -405,16 +410,17 @@ div#modal div.btnWrapper {
   text-align: end;
 }
 
-div#modal_content {
-  max-height: 85vh;
+div#proj-overlay {
   overflow-y: auto;
 }
 
-div#modal_content::-webkit-scrollbar {
+div#proj-overlay::-webkit-scrollbar {
   display: none;
 }
 
 div#modal {
+  margin: 0 auto;
+  box-sizing: border-box;
   width: 90%;
   position: absolute;
   top: 50%;
@@ -427,7 +433,6 @@ div#modal {
 }
 
 div.content-info {
-  margin-top: 1em;
   display: grid;
   grid-template-areas: 
     'proj-name proj-name proj-name'
@@ -898,9 +903,7 @@ Media Queries for Medium and Large screens
     padding-bottom: 0;
   }
 
-  div#modal_content {
-    max-height: 80vh;
-  }
+
 
   div#modal {
     width: 50%;
@@ -911,6 +914,7 @@ Media Queries for Medium and Large screens
     background-color: #fff;
     padding: 1.3em;
     border-radius: 8px;
+    margin-top: 7em;
   }
 
   div.content-info {
@@ -920,10 +924,6 @@ Media Queries for Medium and Large screens
       'pj-tech-lists pj-tech-lists pj-tech-lists'
       'proj-desc proj-desc proj-desc';
     column-gap: 2px;
-  }
-
-  h2.proj-name {
-    font-size: 29px;
   }
 
   .content-info-btn {
