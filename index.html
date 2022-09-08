@@ -8,6 +8,15 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <div id="proj-overlay">
+        <div id="modal">
+            <div class="btnWrapper">
+                <button type="button" class="modal_close">X</button>
+            </div>
+            <div id="modal_content"></div>
+
+        </div>   
+    </div>
     <section class="main-wrapper">
         <div class="hero-section">
             <nav class="navigation">
@@ -74,116 +83,7 @@
         <section id="projects">
             <h3 class="pj-heading">My Recent Works</h3>
 
-            <section class="project-list">
-                <div class="pj-card pj-1">
-                    <div class="pj-thumbnail"></div>
-                    <div class="pj-card-body">
-                        <h2 class="pj-card-title">Multi-Post Stories Gain+Glory</h2>
-                        <ul class="pj-card-lists">
-                            <li class="pj-card-list-item">
-                                <span>css</span>
-                            </li>
-                            <li class="pj-card-list-item">
-                                <span>javascript</span>
-                            </li>
-                            <li class="pj-card-list-item">
-                                <span>html</span>
-                            </li>
-                        </ul>
-                        <button class="pj-card-action" type="button">See Project</button>
-                    </div>
-                </div>
-                <div class="pj-card pj-2">
-                    <div class="pj-thumbnail"></div>
-                    <div class="pj-card-body">
-                        <h2 class="pj-card-title">Multi-Post Stories Gain+Glory</h2>
-                        <ul class="pj-card-lists">
-                            <li class="pj-card-list-item">
-                                <span>css</span>
-                            </li>
-                            <li class="pj-card-list-item">
-                                <span>javascript</span>
-                            </li>
-                            <li class="pj-card-list-item">
-                                <span>html</span>
-                            </li>
-                        </ul>
-                        <button class="pj-card-action" type="button">See Project</button>
-                    </div>
-                </div>
-                <div class="pj-card pj-3">
-                    <div class="pj-thumbnail"></div>
-                    <div class="pj-card-body">
-                        <h2 class="pj-card-title">Multi-Post Stories Gain+Glory</h2>
-                        <ul class="pj-card-lists">
-                            <li class="pj-card-list-item">
-                                <span>css</span>
-                            </li>
-                            <li class="pj-card-list-item">
-                                <span>javascript</span>
-                            </li>
-                            <li class="pj-card-list-item">
-                                <span>html</span>
-                            </li>
-                        </ul>
-                        <button class="pj-card-action" type="button">See Project</button>
-                    </div>
-                </div>
-                <div class="pj-card pj-4">
-                    <div class="pj-thumbnail"></div>
-                    <div class="pj-card-body">
-                        <h2 class="pj-card-title">Multi-Post Stories Gain+Glory</h2>
-                        <ul class="pj-card-lists">
-                            <li class="pj-card-list-item">
-                                <span>css</span>
-                            </li>
-                            <li class="pj-card-list-item">
-                                <span>javascript</span>
-                            </li>
-                            <li class="pj-card-list-item">
-                                <span>html</span>
-                            </li>
-                        </ul>
-                        <button class="pj-card-action" type="button">See Project</button>
-                    </div>
-                </div>
-                <div class="pj-card pj-5">
-                    <div class="pj-thumbnail"></div>
-                    <div class="pj-card-body">
-                        <h2 class="pj-card-title">Multi-Post Stories Gain+Glory</h2>
-                        <ul class="pj-card-lists">
-                            <li class="pj-card-list-item">
-                                <span>css</span>
-                            </li>
-                            <li class="pj-card-list-item">
-                                <span>javascript</span>
-                            </li>
-                            <li class="pj-card-list-item">
-                                <span>html</span>
-                            </li>
-                        </ul>
-                        <button class="pj-card-action" type="button">See Project</button>
-                    </div>
-                </div>
-                <div class="pj-card pj-6">
-                    <div class="pj-thumbnail"></div>
-                    <div class="pj-card-body">
-                        <h2 class="pj-card-title">Multi-Post Stories Gain+Glory</h2>
-                        <ul class="pj-card-lists">
-                            <li class="pj-card-list-item">
-                                <span>css</span>
-                            </li>
-                            <li class="pj-card-list-item">
-                                <span>javascript</span>
-                            </li>
-                            <li class="pj-card-list-item">
-                                <span>html</span>
-                            </li>
-                        </ul>
-                        <button class="pj-card-action" type="button">See Project</button>
-                    </div>
-                </div>
-            </section>
+            <section class="project-list"></section>
         </section>
 
         <!--About Me-->
@@ -287,6 +187,7 @@
                         <li>
                             <textarea name="text" id="form-textarea" class="form-control" maxlength="500" placeholder="Enter text here" required></textarea>
                         </li>
+                        <li id="errorMessage"></li>
                         <li>
                             <button type="submit" class="btn-submit">Get in touch</button>
                         </li>
