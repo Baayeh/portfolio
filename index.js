@@ -36,51 +36,75 @@ links.forEach((link) => {
 const recentProjects = [
   {
     name: 'Multi-Post Stories Gain+Glory1',
-    description: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sint iusto voluptas a? Libero dicta ducimus asperiores ea repudiandae illum debitis, beatae animi, aliquam voluptates suscipit rerum placeat! Perferendis ratione molestiae, deleniti rem maiores in totam laboriosam libero odit animi aut.',
-    img: '',
+    description:
+      'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sint iusto voluptas a? Libero dicta ducimus asperiores ea repudiandae illum debitis, beatae animi, aliquam voluptates suscipit rerum placeat! Perferendis ratione molestiae, deleniti rem maiores in totam laboriosam libero odit animi aut.',
+    img: [
+      './assets/Snapshoot_Portfolio.png',
+      './assets/Snapshoot_Portfolio-mobile.png',
+    ],
     technologies: ['css', 'javascript', 'html'],
-    linkDemo: '',
-    sourceCode: '',
+    linkDemo: 'https://baayeh.github.io/portfolio/',
+    sourceCode: 'https://github.com/Baayeh/portfolio',
   },
   {
     name: 'Multi-Post Stories Gain+Glory2',
-    description: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Atque animi distinctio voluptate. Earum nulla ex, et blanditiis harum iure libero.',
-    img: '',
+    description:
+      'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Atque animi distinctio voluptate. Earum nulla ex, et blanditiis harum iure libero.',
+    img: [
+      './assets/Snapshoot_Portfolio.png',
+      './assets/Snapshoot_Portfolio-mobile.png',
+    ],
     technologies: ['css', 'javascript', 'html'],
-    linkDemo: '',
-    sourceCode: '',
+    linkDemo: 'https://baayeh.github.io/portfolio/',
+    sourceCode: 'https://github.com/Baayeh/portfolio',
   },
   {
     name: 'Multi-Post Stories Gain+Glory3',
-    description: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Atque animi distinctio voluptate. Earum nulla ex, et blanditiis harum iure libero.',
-    img: '',
+    description:
+      'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Atque animi distinctio voluptate. Earum nulla ex, et blanditiis harum iure libero.',
+    img: [
+      './assets/Snapshoot_Portfolio.png',
+      './assets/Snapshoot_Portfolio-mobile.png',
+    ],
     technologies: ['css', 'javascript', 'html'],
-    linkDemo: '',
-    sourceCode: '',
+    linkDemo: 'https://baayeh.github.io/portfolio/',
+    sourceCode: 'https://github.com/Baayeh/portfolio',
   },
   {
     name: 'Multi-Post Stories Gain+Glory4',
-    description: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Atque animi distinctio voluptate. Earum nulla ex, et blanditiis harum iure libero.',
-    img: '',
+    description:
+      'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Atque animi distinctio voluptate. Earum nulla ex, et blanditiis harum iure libero.',
+    img: [
+      './assets/Snapshoot_Portfolio.png',
+      './assets/Snapshoot_Portfolio-mobile.png',
+    ],
     technologies: ['css', 'javascript', 'html'],
-    linkDemo: '',
-    sourceCode: '',
+    linkDemo: 'https://baayeh.github.io/portfolio/',
+    sourceCode: 'https://github.com/Baayeh/portfolio',
   },
   {
     name: 'Multi-Post Stories Gain+Glory5',
-    description: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Atque animi distinctio voluptate. Earum nulla ex, et blanditiis harum iure libero.',
-    img: '',
+    description:
+      'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Atque animi distinctio voluptate. Earum nulla ex, et blanditiis harum iure libero.',
+    img: [
+      './assets/Snapshoot_Portfolio.png',
+      './assets/Snapshoot_Portfolio-mobile.png',
+    ],
     technologies: ['css', 'javascript', 'html'],
-    linkDemo: '',
-    sourceCode: '',
+    linkDemo: 'https://baayeh.github.io/portfolio/',
+    sourceCode: 'https://github.com/Baayeh/portfolio',
   },
   {
     name: 'Multi-Post Stories Gain+Glory6',
-    description: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Atque animi distinctio voluptate. Earum nulla ex, et blanditiis harum iure libero.',
-    img: '',
+    description:
+      'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Atque animi distinctio voluptate. Earum nulla ex, et blanditiis harum iure libero.',
+    img: [
+      './assets/Snapshoot_Portfolio.png',
+      './assets/Snapshoot_Portfolio-mobile.png',
+    ],
     technologies: ['css', 'javascript', 'html'],
-    linkDemo: '',
-    sourceCode: '',
+    linkDemo: 'https://baayeh.github.io/portfolio/',
+    sourceCode: 'https://github.com/Baayeh/portfolio',
   },
 ];
 
@@ -104,7 +128,7 @@ recentProjects.forEach((project, index) => {
 
   projectList.innerHTML += projectItem;
 });
-
+// console.log(typeof window.innerWidth);
 const projectDetails = document.querySelectorAll('.pj-card-action');
 
 // Modal Pop up
@@ -114,24 +138,32 @@ modalClose.addEventListener('click', () => {
 });
 
 const addModalContent = (projItem) => {
+  let img = '';
+  const windowWidth = window.innerWidth;
+  if (windowWidth > 738) {
+    img = `<img src=${projItem.img[0]} width="100%" alt="Image of the project on large screens">`;
+  } else {
+    img = `<img src=${projItem.img[1]} width="100%" alt="Image of the project on mobile devices">`;
+  }
+
   let technologies = '';
   projItem.technologies.forEach((technology) => {
     technologies += `<li class="pj-tech-item">
     <span>${technology}</span>
 </li>`;
   });
-  const modDetail = `<div class="proj_img">
-                      <img src="./assets/Snapshoot_Portfolio.png" width="100%" alt="">
+  const modDetail = `<div class="proj_img text-center">
+                      ${img}
                     </div>
 
                     <div class="content-info">
                       <h2 class="proj-name">${projItem.name}</h2>
                       <div class="content-info-btn">
-                          <a href=${projItem.linkDemo} type="button" class="info-link">
+                          <a href=${projItem.linkDemo} target="_blank" type="button" class="info-link">
                               <span>See live</span>
                               <span><img src="./assets/Icon-Export.svg" alt=""></span>
                           </a>
-                          <a href=${projItem.sourceCode} type="button" class="info-link">
+                          <a href=${projItem.sourceCode} target="_blank" type="button" class="info-link">
                               <span>See Source</span>
                               <span><img src="./assets/Icon-GitHub.svg" alt=""></span>
                           </a>
