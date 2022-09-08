@@ -34,7 +34,6 @@ button {
   color: #fff;
   padding: 7px 13px;
   border-radius: 7px;
-  /* margin: 10px 0; */
   transition: 0.5s;
   border: none;
   cursor: pointer;
@@ -451,7 +450,7 @@ div.content-info {
   column-gap: 2px;
 }
 
-.text-center{
+.text-center {
   text-align: center;
 }
 
@@ -1045,12 +1044,12 @@ Media Queries for Medium and Large screens
     display: none;
   }
 
-  #modal_content{
+  #modal_content {
     height: 80vh;
     overflow-y: auto;
   }
 
-  #modal_content::-webkit-scrollbar{
+  #modal_content::-webkit-scrollbar {
     display: none;
   }
 }
