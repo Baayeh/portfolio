@@ -7,6 +7,7 @@ const modalClose = document.querySelector('.modal_close');
 const modalOverlay = document.querySelector('#proj-overlay');
 const modalContent = document.querySelector('#modal_content');
 const mainWrapper = document.querySelector('.main-wrapper');
+const form = document.querySelector('#form');
 
 openBtn.addEventListener('click', () => {
   navList.style.left = '0';
@@ -152,4 +153,13 @@ projectDetails.forEach((element) => {
     const project = recentProjects[singleProj];
     addModalContent(project);
   });
+});
+
+form.addEventListener('submit', (e) => {
+  e.preventDefault();
+  const { email } = form.elements;
+  const emailToLowerCase = email.value.toLowerCase();
+  if (email.value === emailToLowerCase) {
+    form.submit();
+  }
 });
