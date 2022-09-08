@@ -32,12 +32,13 @@ p {
 button {
   background-color: #36b37f;
   color: #fff;
-  padding: 12px;
-  border-radius: 4px;
-  margin: 10px 0;
+  padding: 7px 13px;
+  border-radius: 7px;
+  /* margin: 10px 0; */
   transition: 0.5s;
   border: none;
   cursor: pointer;
+  margin-bottom: 6px;
 }
 
 button:hover {
@@ -338,7 +339,7 @@ div#proj-overlay {
   bottom: 0;
   z-index: 10;
   display: none;
-  overflow-y: auto;
+  overflow-y: hidden;
 }
 
 .proj-name {
@@ -416,7 +417,7 @@ li.pj-tech-item {
 
 div.btnWrapper {
   position: absolute;
-  top: 8px;
+  top: 25px;
   right: 27px;
   text-align: end;
 }
@@ -448,6 +449,10 @@ div.content-info {
   display: grid;
   grid-template-areas: 'proj-name proj-name proj-name' 'pj-tech-lists pj-tech-lists pj-tech-lists' 'proj-desc proj-desc proj-desc' 'content-info-btn content-info-btn content-info-btn';
   column-gap: 2px;
+}
+
+.text-center{
+  text-align: center;
 }
 
 @keyframes slideDown {
@@ -896,7 +901,7 @@ Media Queries for Medium and Large screens
   }
 
   div#modal {
-    width: 50%;
+    width: 45%;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -904,7 +909,6 @@ Media Queries for Medium and Large screens
     background-color: #fff;
     padding: 1.3em;
     border-radius: 8px;
-    margin-top: 7em;
   }
 
   div.content-info {
@@ -1038,6 +1042,15 @@ Media Queries for Medium and Large screens
   }
 
   p.email-address {
+    display: none;
+  }
+
+  #modal_content{
+    height: 80vh;
+    overflow-y: auto;
+  }
+
+  #modal_content::-webkit-scrollbar{
     display: none;
   }
 }
