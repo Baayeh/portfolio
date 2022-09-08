@@ -466,6 +466,11 @@ div.content-info {
   }
 }
 
+.btnWrapper {
+  position: absolute;
+  right: 25px;
+}
+
 /*
 About Me Section
 */
@@ -596,7 +601,6 @@ ul.form-list {
   width: 300px;
   height: 48px;
   border-radius: 4px;
-  background-color: #fff;
   color: #6b778c;
   font-size: 15px;
   font-weight: 400;
@@ -630,6 +634,10 @@ p.email-address {
   color: #42526e;
 }
 
+li#errorMessage {
+  color: red;
+  text-align: center;
+}
 /*
 Media Queries for Medium and Large screens
 */
@@ -938,7 +946,7 @@ Media Queries for Medium and Large screens
     color: #67798e;
     font-size: 1em;
   }
-
+  
   /*
   About Section
   */
