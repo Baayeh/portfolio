@@ -8,6 +8,8 @@ const modalOverlay = document.querySelector('#proj-overlay');
 const modalContent = document.querySelector('#modal_content');
 const mainWrapper = document.querySelector('.main-wrapper');
 const form = document.querySelector('#form');
+const error = document.querySelector('#errorMessage');
+
 
 openBtn.addEventListener('click', () => {
   navList.style.left = '0';
@@ -161,5 +163,7 @@ form.addEventListener('submit', (e) => {
   const emailToLowerCase = email.value.toLowerCase();
   if (email.value === emailToLowerCase) {
     form.submit();
+  } else {
+    error.innerText = 'Please input lower cases for email'
   }
 });
