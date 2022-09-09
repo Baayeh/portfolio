@@ -225,5 +225,6 @@ form.addEventListener('change', (e) => {
   }
 
   const localStore = JSON.stringify(userInfo);
-  localStorage.setItem('info', localStore);
 });
+
+localStorage.setItem('info', localStore);
