@@ -29,7 +29,7 @@ links.forEach((link) => {
         top: moveTop,
         behavior: 'smooth',
       });
-    }, 700);
+    }, 400);
   });
 });
 
@@ -200,3 +200,9 @@ form.addEventListener('submit', (e) => {
     error.innerText = `Please input lower cases for email: ( ${emailToLowerCase} )`;
   }
 });
+
+const userInfo = {
+  name: '',
+  email: '',
+  text: '',
+};
