@@ -201,8 +201,30 @@ form.addEventListener('submit', (e) => {
   }
 });
 
-const userInfo = {
-  name: '',
-  email: '',
-  text: '',
-};
+const userInfo = localStorage.getItem('info') 
+  ? JSON.parse(localStorage.getItem('info')) : { name: '', email: '', text: '',}
+
+
+// const userInfo = {
+//   name: '',
+//   email: '',
+//   text: '',
+// };
+
+form.addEventListener('change', (e) => {
+  e.preventDefault();
+  if(e.target.name === 'name') {
+    userInfo.name = e.target.value;
+  }
+  if(e.target.name === 'email'){
+    userInfo.email = e.target.value;
+  } 
+  if(e.target.name === 'text') {
+    userInfo.text = e.target.value;
+  }
+
+  let localStore = JSON.stringify(userInfo);
+  localStorage.setItem('info', localStore) 
+})
+
+console.log(localStorage)
