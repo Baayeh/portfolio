@@ -2,14 +2,14 @@
 General Styles
 */
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700&display=swap");
 
 html {
   scroll-behavior: smooth;
 }
 
 body {
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   color: #28352f;
   margin: 0;
 }
@@ -96,6 +96,7 @@ ul.nav-list {
   transition: left 0.7s;
   border-bottom-left-radius: 3em;
   border-bottom-right-radius: 3em;
+  z-index: 1;
 }
 
 li.nav-item {
@@ -130,7 +131,7 @@ button#close-btn {
 Headline Section
 */
 section#headline-section {
-  background-image: url('assets/header-illsutration-mobile.svg');
+  background-image: url("assets/header-illsutration-mobile.svg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: top;
@@ -247,10 +248,42 @@ div.pj-card {
   border-radius: 8px;
   display: flex;
   flex-direction: column;
+  position: relative;
+  overflow: hidden;
+}
+
+div.pj-card:hover img.pj-img {
+  transform: scale(1.1);
 }
 
 div.pj-thumbnail {
+  width: 100%;
+  height: 254px;
+  position: absolute;
+  z-index: 1;
+  background-color: #091e42;
+  opacity: 0.5;
+}
+
+div.img-container {
+  overflow: hidden;
+}
+
+img.pj-img {
+  max-width: 355px;
   height: 250px;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  transition: 1s;
+}
+
+div.proj_img {
+  box-shadow: 0 2px 5px #889aaf;
+}
+
+img.pj-img-modal {
+  max-width: 300px;
+  height: 200px;
 }
 
 div.pj-card-body {
@@ -417,13 +450,14 @@ li.pj-tech-item {
 div.btnWrapper {
   position: absolute;
   top: 25px;
-  right: 27px;
+  right: 30px;
   text-align: end;
 }
 
 div.btnWrapper button {
-  background-color: transparent;
-  font-size: 2em;
+  background-color: #67798e;
+  font-size: 1em;
+  color: #091e42;
 }
 
 div#proj-overlay::-webkit-scrollbar {
@@ -446,7 +480,7 @@ div#modal {
 
 div.content-info {
   display: grid;
-  grid-template-areas: 'proj-name proj-name proj-name' 'pj-tech-lists pj-tech-lists pj-tech-lists' 'proj-desc proj-desc proj-desc' 'content-info-btn content-info-btn content-info-btn';
+  grid-template-areas: "proj-name proj-name proj-name" "pj-tech-lists pj-tech-lists pj-tech-lists" "proj-desc proj-desc proj-desc" "content-info-btn content-info-btn content-info-btn";
   column-gap: 2px;
 }
 
@@ -481,7 +515,7 @@ section#about-me {
 }
 
 section.about-text {
-  background-image: url('assets/aboutFrame.svg'), url('assets/Mask_Group.svg');
+  background-image: url("assets/aboutFrame.svg"), url("assets/Mask_Group.svg");
   background-repeat: no-repeat, no-repeat;
   background-position: left bottom, right top;
   text-align: center;
@@ -592,7 +626,7 @@ ul.form-list {
   width: 100%;
   display: flex;
   justify-content: center;
-  background-image: url('./assets/illustration-contact-form.svg');
+  background-image: url("./assets/illustration-contact-form.svg");
   background-repeat: no-repeat;
   background-position: right bottom;
 }
@@ -686,7 +720,7 @@ Media Queries for Medium and Large screens
   }
 
   div.hero-section {
-    background-image: url('assets/Header-llustration-desktop.svg');
+    background-image: url("assets/Header-llustration-desktop.svg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: top;
@@ -772,7 +806,7 @@ Media Queries for Medium and Large screens
 
   div.content-info {
     display: grid;
-    grid-template-areas: 'proj-name proj-name content-info-btn' 'pj-tech-lists pj-tech-lists pj-tech-lists' 'proj-desc proj-desc proj-desc';
+    grid-template-areas: "proj-name proj-name content-info-btn" "pj-tech-lists pj-tech-lists pj-tech-lists" "proj-desc proj-desc proj-desc";
     column-gap: 2px;
   }
 }
@@ -782,7 +816,7 @@ Media Queries for Medium and Large screens
   Headline Section
   */
   div.hero-section {
-    background-image: url('assets/Header-llustration-desktop.svg');
+    background-image: url("assets/Header-llustration-desktop.svg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: top;
@@ -840,25 +874,6 @@ Media Queries for Medium and Large screens
   section#headline-section {
     background: none;
     margin-top: 2em;
-  }
-
-  .kwasi {
-    animation-name: rotation;
-    animation-duration: 3s;
-  }
-
-  @keyframes rotation {
-    0% {
-      transform: rotate(0deg);
-    }
-
-    50% {
-      transform: rotate(180deg);
-    }
-
-    100% {
-      transform: rotate(360deg);
-    }
   }
 
   h2.pt_1,
@@ -921,7 +936,7 @@ Media Queries for Medium and Large screens
 
   div.content-info {
     display: grid;
-    grid-template-areas: 'proj-name proj-name content-info-btn' 'pj-tech-lists pj-tech-lists pj-tech-lists' 'proj-desc proj-desc proj-desc';
+    grid-template-areas: "proj-name proj-name content-info-btn" "pj-tech-lists pj-tech-lists pj-tech-lists" "proj-desc proj-desc proj-desc";
     column-gap: 2px;
   }
 
@@ -956,7 +971,8 @@ Media Queries for Medium and Large screens
   }
 
   section.about-text {
-    background-image: url('assets/illustration-about-me-2-desktop@2x.svg'), url('assets/illustration-about\ me-1-desktop@2x.svg');
+    background-image: url("assets/illustration-about-me-2-desktop@2x.svg"),
+      url("assets/illustration-about\ me-1-desktop@2x.svg");
     background-repeat: no-repeat, no-repeat;
     background-size: 10em, 8em;
     background-position: left center, right top;
@@ -1008,7 +1024,9 @@ Media Queries for Medium and Large screens
   }
 
   section#contact {
-    background-image: url('assets/Frame-1.svg'), url('assets/illustration-2-contact-form-desktop.svg'), url('assets/Frame.svg');
+    background-image: url("assets/Frame-1.svg"),
+      url("assets/illustration-2-contact-form-desktop.svg"),
+      url("assets/Frame.svg");
     background-repeat: no-repeat;
     background-position: left bottom, 10em bottom, right bottom;
     background-size: 9em;

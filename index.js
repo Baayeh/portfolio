@@ -35,25 +35,19 @@ links.forEach((link) => {
 
 const recentProjects = [
   {
-    name: 'Multi-Post Stories Gain+Glory1',
+    name: 'Devs Assemble Summit',
     description:
-      'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sint iusto voluptas a? Libero dicta ducimus asperiores ea repudiandae illum debitis, beatae animi, aliquam voluptates suscipit rerum placeat! Perferendis ratione molestiae, deleniti rem maiores in totam laboriosam libero odit animi aut.',
-    img: [
-      './assets/Snapshoot_Portfolio.png',
-      './assets/Snapshoot_Portfolio-mobile.png',
-    ],
+      'Devs Assemble is the first capstone project I built during my time at Microverse. The website comprises of a homepage, about page and a contact page. The Featured Speakers section on the homepage was injected dynamically using javascript',
+    img: './assets/dev-summit.PNG',
     technologies: ['css', 'javascript', 'html'],
-    linkDemo: 'https://baayeh.github.io/portfolio/',
-    sourceCode: 'https://github.com/Baayeh/portfolio',
+    linkDemo: 'https://baayeh.github.io/dev-summit/',
+    sourceCode: 'https://github.com/Baayeh/dev-summit',
   },
   {
     name: 'Multi-Post Stories Gain+Glory2',
     description:
       'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Atque animi distinctio voluptate. Earum nulla ex, et blanditiis harum iure libero.',
-    img: [
-      './assets/Snapshoot_Portfolio.png',
-      './assets/Snapshoot_Portfolio-mobile.png',
-    ],
+    img: './assets/dev-summit.PNG',
     technologies: ['css', 'javascript', 'html'],
     linkDemo: 'https://baayeh.github.io/portfolio/',
     sourceCode: 'https://github.com/Baayeh/portfolio',
@@ -62,10 +56,7 @@ const recentProjects = [
     name: 'Multi-Post Stories Gain+Glory3',
     description:
       'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Atque animi distinctio voluptate. Earum nulla ex, et blanditiis harum iure libero.',
-    img: [
-      './assets/Snapshoot_Portfolio.png',
-      './assets/Snapshoot_Portfolio-mobile.png',
-    ],
+    img: './assets/dev-summit.PNG',
     technologies: ['css', 'javascript', 'html'],
     linkDemo: 'https://baayeh.github.io/portfolio/',
     sourceCode: 'https://github.com/Baayeh/portfolio',
@@ -74,10 +65,7 @@ const recentProjects = [
     name: 'Multi-Post Stories Gain+Glory4',
     description:
       'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Atque animi distinctio voluptate. Earum nulla ex, et blanditiis harum iure libero.',
-    img: [
-      './assets/Snapshoot_Portfolio.png',
-      './assets/Snapshoot_Portfolio-mobile.png',
-    ],
+    img: './assets/dev-summit.PNG',
     technologies: ['css', 'javascript', 'html'],
     linkDemo: 'https://baayeh.github.io/portfolio/',
     sourceCode: 'https://github.com/Baayeh/portfolio',
@@ -86,10 +74,7 @@ const recentProjects = [
     name: 'Multi-Post Stories Gain+Glory5',
     description:
       'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Atque animi distinctio voluptate. Earum nulla ex, et blanditiis harum iure libero.',
-    img: [
-      './assets/Snapshoot_Portfolio.png',
-      './assets/Snapshoot_Portfolio-mobile.png',
-    ],
+    img: './assets/dev-summit.PNG',
     technologies: ['css', 'javascript', 'html'],
     linkDemo: 'https://baayeh.github.io/portfolio/',
     sourceCode: 'https://github.com/Baayeh/portfolio',
@@ -98,10 +83,7 @@ const recentProjects = [
     name: 'Multi-Post Stories Gain+Glory6',
     description:
       'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Atque animi distinctio voluptate. Earum nulla ex, et blanditiis harum iure libero.',
-    img: [
-      './assets/Snapshoot_Portfolio.png',
-      './assets/Snapshoot_Portfolio-mobile.png',
-    ],
+    img: './assets/dev-summit.PNG',
     technologies: ['css', 'javascript', 'html'],
     linkDemo: 'https://baayeh.github.io/portfolio/',
     sourceCode: 'https://github.com/Baayeh/portfolio',
@@ -116,6 +98,7 @@ recentProjects.forEach((project, index) => {
       </li>`;
   });
   const projectItem = ` <div class="pj-card pj-1" id=${index}>
+    <div class="img-container"><img class="pj-img" src="./assets/dev-summit.PNG" alt=""></div>
     <div class="pj-thumbnail"></div>
     <div class="pj-card-body">
         <h2 class="pj-card-title">${project.name}</h2>
@@ -152,8 +135,8 @@ const addModalContent = (projItem) => {
     <span>${technology}</span>
 </li>`;
   });
-  const modDetail = `<div class="proj_img text-center">
-                      ${img}
+  const modDetail = `<div class="proj_img">
+                      <img class="pj-img-modal" src="${projItem.img}">
                     </div>
 
                     <div class="content-info">
